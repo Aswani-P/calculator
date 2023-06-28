@@ -58,7 +58,7 @@ equalButton.addEventListener('click',performOperation);
 function dotOperation(){
     
     display = document.getElementById("display");
-    if(display.innerText===""|| display.innerText.slice(-1)==="-"||display.innerText.slice(-1)==="+"||display.innerText.slice(-1)==="/"||display.innerText.slice(-1)==="*"){
+    if(/[-+/*]$/.test(display.innerText)){
         display.innerText += '0.';
     }
     
