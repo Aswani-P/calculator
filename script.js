@@ -2,7 +2,7 @@ Array.from(document.querySelectorAll(".button-num")).forEach(button => {
     
     button.addEventListener("click",numberButton);
 })
-// operator=["AC","MC","/","+","-","*"];
+// operator=["/","+","-","*"];
 function numberButton(){
     document.getElementById("display").innerText +=this.innerText;   
 }
@@ -53,6 +53,16 @@ function performOperation(){
 }
 equalButton = document.querySelector('.btn-eql');
 equalButton.addEventListener('click',performOperation);
-operatorButtons = document.querySelectorAll('.btn-op');
-operatorButtons.addEventListener('click', performOperation);
 
+
+function dotOperation(){
+    
+    display = document.getElementById("display");
+    if(display.innerText===""|| display.innerText.slice(-1)==="-"||display.innerText.slice(-1)==="+"||display.innerText.slice(-1)==="/"||display.innerText.slice(-1)==="*"){
+        display.innerText += '0.';
+    }
+    
+}
+
+dotButton = document.querySelector('.dot-btn');
+dotButton.addEventListener('click',dotOperation);
