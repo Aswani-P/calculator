@@ -60,9 +60,27 @@ function dotOperation(){
     display = document.getElementById("display");
     if(/[-+/*]$/.test(display.innerText)|| display.innerText===""){
         display.innerText += '0.';
+    }else{
+        document.getElementById("display").innerText +=this.innerText;
     }
     
 }
 
 dotButton = document.querySelector('.dot-btn');
 dotButton.addEventListener('click',dotOperation);
+
+
+function displayLength() {
+     display = document.getElementById("display");
+     maxLength = 10;
+     console.log("sdh");
+  
+    if (display.innerText.length > maxLength) {
+        display.innerText = display.innerText.slice(0, maxLength);
+    }
+  }
+Array.from(document.querySelectorAll(".button-num")).forEach(button => {
+    
+    button.addEventListener("click",displayLength);
+})
+  
