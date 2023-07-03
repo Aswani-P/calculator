@@ -27,7 +27,7 @@ body{
     border: 1px solid whitesmoke;
     border-radius: 10px;
     background-color: rgb(230, 228, 225);
-    color: rgb(10, 8, 8);
+    color: rgb(153, 49, 49);
     font-size: 35px;
     display: flex;
     font-family: 'Lora', serif;
@@ -82,6 +82,7 @@ body{
     background-color: darkgray;
     color: black;
     padding: 2px;
+    cursor: pointer;
 
 }
 #calculator
